@@ -19,7 +19,6 @@ cd -
 
 
 sudo apt install i3
-
 cd ../dotfiles
 stow -t ~ i3
 cd -
@@ -31,13 +30,16 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 cd -
 sudo apt -f install
 
-
 # Nicer graphics
 sudo apt install compton
 cd ../dotfiles
 stow -t ~ compton
 cd -
 
-
 # Don't burn my eyes at night
 sudo apt install redshift
+
+# Basic inputrc setup
+cd ../dotfiles
+stow -t ~ inputrc
+cd -
