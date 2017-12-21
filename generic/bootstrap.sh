@@ -34,4 +34,10 @@ sudo apt -f install
 
 # Nicer graphics
 sudo apt install compton
+cd ../dotfiles
+stow -t ~ compton
+cd -
+
+
+# Don't burn my eyes at night
 sudo apt install redshift
