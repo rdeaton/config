@@ -1,3 +1,6 @@
+exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id redshift -l 37.72:122.44
+
 set $mod Mod4
 set $alt Mod1
 
@@ -6,7 +9,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $alt+Return exec i3-sensible-terminal
+bindsym $alt+Return exec gnome-terminal
 
 # kill focused window
 bindsym $alt+q kill
