@@ -1,0 +1,24 @@
+set editing-mode vi
+set show-all-if-ambiguous on
+set completion-ignore-case on
+menu-complete-display-prefix on
+
+set keymap vi-command
+# Insert the arguments from the last command
+"p": "i !!*\r"
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+set keymap vi-insert
+
+TAB: menu-complete
+# Shift-TAB 
+"\e[Z": menu-complete-backward
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward
+
+# Needed because binding 'p' in command mode above wipes its insert mode
+# function, too. This fixes that, and will insert 'p' when you type 'p'.
+"p": self-insert
