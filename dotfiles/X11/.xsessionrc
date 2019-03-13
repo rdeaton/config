@@ -1,5 +1,0 @@
-if [ -f $hoME/.Xresources ]; then
-  xrdb -merge ~/.Xresources
-fi
-
-xrandr --dpi 144

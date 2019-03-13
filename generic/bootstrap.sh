@@ -16,12 +16,11 @@ sudo apt install -y neovim
 sudo apt install -y i3
 sudo apt install -y redshift
 sudo apt install -y build-essential
+sudo apt install -y python3-pip
+sudo apt install -y autokey-gtk
 
-cd ../dotfiles
-stow -t ~ i3
-stow -t ~ git
-stow -t ~ inputrc
-stow -t ~ X11
+cd ../
+stow -t ~ dotfiles
 cd -
 
 # Google Chrome
