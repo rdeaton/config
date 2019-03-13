@@ -13,7 +13,7 @@ sudo apt install -y stow
 sudo apt install -y git
 sudo apt install -y neovim
 # We'll overwrite this later with i3-gaps, but convenient for dependencies
-sudo apt install -y i3
+sudo apt install -y i3 i3blocks
 sudo apt install -y redshift
 sudo apt install -y build-essential
 sudo apt install -y python3-pip
