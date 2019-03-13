@@ -25,6 +25,7 @@ mkdir -p .build
 ./i3-gaps.sh
 
 rm ~/.profile ~/.bashrc
+mkdir -p ~/.local/bin
 cd ../
 ./link_dotfiles.sh
 cd -
