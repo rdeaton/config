@@ -19,7 +19,7 @@
         ]
     }, 
     "filter": {
-        "regex": null, 
+        "regex": "google-chrome.Google-chrome", 
         "isRecursive": false
     }, 
     "type": "folder", 
