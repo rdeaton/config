@@ -18,7 +18,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $alt+Return exec urxvt
+bindsym $alt+Return exec st
 
 # kill focused window
 bindsym $alt+q kill
