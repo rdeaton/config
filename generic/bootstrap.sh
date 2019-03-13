@@ -20,7 +20,7 @@ sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
 
 cd ../
-stow -t ~ dotfiles
+./link_dotfiles.sh
 cd -
 
 # Google Chrome
