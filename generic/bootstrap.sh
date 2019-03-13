@@ -19,6 +19,8 @@ sudo apt install -y build-essential
 sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
 
+mkdir -p .build
+
 ./i3-gaps.sh
 
 rm ~/.profile ~/.bashrc
