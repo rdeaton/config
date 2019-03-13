@@ -19,6 +19,7 @@ sudo apt install -y build-essential
 sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
 
+rm ~/.profile ~/.bashrc
 cd ../
 ./link_dotfiles.sh
 cd -
