@@ -18,6 +18,7 @@ sudo apt install -y redshift
 sudo apt install -y build-essential
 sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
+sudo apt install -y unclutter
 
 mkdir -p .build
 

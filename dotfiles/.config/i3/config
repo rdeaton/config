@@ -1,6 +1,7 @@
 exec --no-startup-id xrandr --output eDP1 --dpi 288 --scale 1.5x1.5
 exec --no-startup-id redshift -l 37.72:122.44
 exec --no-startup-id autokey
+exec --no-startup-id unclutter
 
 default_border none
 
