@@ -6,6 +6,7 @@
 	pr = !"git pull && git rebase"
 	ci = commit
 	ca = !git add -A && git commit -av
+	co = checkout
 
 	# Switch to a branch, creating it if necessary
 	go = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
