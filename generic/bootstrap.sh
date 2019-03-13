@@ -11,16 +11,17 @@ sudo apt-add-repository universe
 sudo apt update
 sudo apt install -y stow
 sudo apt install -y git
+sudo apt install -y neovim
+# We'll overwrite this later with i3-gaps, but convenient for dependencies
+sudo apt install -y i3
+sudo apt install -y redshift
+sudo apt install -y build-essential
 
-
-cd ../dotfiles
-stow -t ~ X11
-cd -
-
-
-sudo apt install i3
 cd ../dotfiles
 stow -t ~ i3
+stow -t ~ git
+stow -t ~ inputrc
+stow -t ~ X11
 cd -
 
 # Google Chrome
@@ -29,15 +30,6 @@ wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 cd -
 sudo apt -f install
-
-# Nicer graphics
-sudo apt install compton
-cd ../dotfiles
-stow -t ~ compton
-cd -
-
-# Don't burn my eyes at night
-sudo apt install redshift
 
 # Basic inputrc setup
 cd ../dotfiles

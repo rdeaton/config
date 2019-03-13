@@ -1,1 +1,2 @@
-Xft.dpi: 144
+Xft.dpi: 288
+URxvt.font: xft:monaco:size=12

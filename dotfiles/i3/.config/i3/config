@@ -1,5 +1,11 @@
-exec --no-startup-id compton --config ~/.config/compton.conf -b
+exec --no-startup-id xrandr --output eDP1 --dpi 288 --scale 1.5x1.5
 exec --no-startup-id redshift -l 37.72:122.44
+
+default_border none
+
+gaps inner 10
+gaps outer 10
+for_window [class="^.*"] border pixel 2
 
 set $mod Mod4
 set $alt Mod1
@@ -9,7 +15,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $alt+Return exec gnome-terminal
+bindsym $alt+Return exec urxvt
 
 # kill focused window
 bindsym $alt+q kill
