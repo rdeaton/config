@@ -29,9 +29,3 @@ cd /tmp
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 cd -
-sudo apt -f install
-
-# Basic inputrc setup
-cd ../dotfiles
-stow -t ~ inputrc
-cd -
