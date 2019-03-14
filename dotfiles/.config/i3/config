@@ -1,5 +1,5 @@
 exec --no-startup-id xrandr --output eDP1 --dpi 192
-exec --no-startup-id redshift -l 37.72:122.44
+exec --no-startup-id redshift-enable
 exec --no-startup-id autokey
 exec --no-startup-id unclutter
 exec --no-startup-id xsetroot -solid "#000000"
