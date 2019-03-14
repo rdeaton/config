@@ -4,6 +4,7 @@ exec --no-startup-id autokey
 exec --no-startup-id unclutter
 exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id mouseconfig
+exec --no-startup-id clipster -d
 
 default_border none
 
@@ -22,6 +23,7 @@ focus_follows_mouse no
 focus_wrapping no
 
 bindsym $ctrl+space exec rofi -show run
+bindsym $mod+v exec roficlip
 
 bindsym XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10
 bindsym XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10
