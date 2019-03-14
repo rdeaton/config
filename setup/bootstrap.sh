@@ -15,7 +15,7 @@ sudo apt install -y neovim
 # We'll overwrite this later with i3-gaps, but convenient for dependencies
 sudo apt install -y i3 i3blocks
 sudo apt install -y redshift
-sudo apt install -y build-essential
+sudo apt install -y build-essential libtool-bin
 sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
 sudo apt install -y unclutter
@@ -24,6 +24,7 @@ mkdir -p .build
 
 ./i3-gaps.sh
 ./fonts.sh
+./rofi.sh
 
 rm ~/.profile ~/.bashrc
 mkdir -p ~/.local/bin
