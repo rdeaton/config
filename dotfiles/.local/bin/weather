@@ -1,0 +1,4 @@
+#!/bin/bash
+echo "$@"
+location="$@"; [ -z "$location" ] && location="94131"
+curl -s "wttr.in/$location"
