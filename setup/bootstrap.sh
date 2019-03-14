@@ -19,6 +19,8 @@ sudo apt install -y build-essential libtool-bin
 sudo apt install -y python3-pip
 sudo apt install -y autokey-gtk
 sudo apt install -y unclutter
+sudo apt install -y xsel
+sudo apt install -y xclip
 
 mkdir -p .build
 
