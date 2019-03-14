@@ -18,20 +18,17 @@ set $ctrl Control
 font pango:monospace 10
 
 floating_modifier $mod
+focus_follows_mouse no
+focus_wrapping no
 
-# start a terminal
-bindsym $alt+Return exec st
-
-# kill focused window
-bindsym $alt+q kill
-bindsym $ctrl+space exec dmenu_run
+bindsym $ctrl+space exec rofi -show run
 
 bindsym XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10
 bindsym XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10
 bindsym XF86AudioMute			exec --no-startup-id pulsemixer --toggle-mute
 
 bar {
-	font pango:mono 10
+	font pango:Terminus 12
 	status_command i3blocks
 	position top
 	mode dock
@@ -133,9 +130,3 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-bar {
-        status_command i3status
-        tray_output primary
-}
