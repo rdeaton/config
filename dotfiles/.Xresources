@@ -1,8 +1,5 @@
 Xft.dpi: 288
-URxvt.font: xft:monaco:size=12
-*.font: monaco:size=12:antialias=true:autohint=true
-
-# Gruvbox Dark
+*.font: Source Code Pro for Powerline:size=12:antialias=true:autohint=true
 
 ! hard contrast: *background: #1d2021
 *background: #282828

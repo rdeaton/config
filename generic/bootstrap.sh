@@ -23,6 +23,7 @@ sudo apt install -y unclutter
 mkdir -p .build
 
 ./i3-gaps.sh
+./fonts.sh
 
 rm ~/.profile ~/.bashrc
 mkdir -p ~/.local/bin
