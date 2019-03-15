@@ -27,5 +27,13 @@ pushd .build
 git clone https://github.com/gilbertw1/roficlip.git
 cd roficlip
 git pull
-cp roficlip ~/.local/bin/roficlip
+cp roficlip ~/.local/bin/rofi-clip
+popd
+
+sudo apt install -y nmcli iw wireless_tools
+pushd .build
+git clone https://github.com/zbaylin/rofi-wifi-menu.git
+cd rofi-wifi-menu
+git pull
+cp rofi-wifi-menu.sh ~/.local/bin/rofi-wifi-menu
 popd

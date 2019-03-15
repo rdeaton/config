@@ -1,5 +1,7 @@
 mkdir -p ~/.local/share/fonts
 
+sudo apt install -y fonts-font-awesome
+
 pushd .build
 git clone https://github.com/powerline/fonts.git --depth=1
 pushd fonts
