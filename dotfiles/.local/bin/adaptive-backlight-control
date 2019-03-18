@@ -1,0 +1,7 @@
+#!/bin/bash
+CUR=$(xbacklight -get | cut -d. -f1)
+DIR=$1
+echo $CUR
+[ "$CUR" -le 10 ] && xbacklight $DIR 1 && exit 0
+[ "$CUR" -ge 90 ] && xbacklight $DIR 1 && exit 0
+xbacklight $DIR 10
