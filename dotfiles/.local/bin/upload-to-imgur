@@ -1,0 +1,5 @@
+#!/bin/bash
+FILE=$1
+ADDR=$(imgur $FILE | tail -n 1 | awk 'NF{ print $NF }')
+notify-send "$FILE uploaded to imgur"
+echo $ADDR | xclip -i -selection clipboard
