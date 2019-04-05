@@ -2,3 +2,4 @@ setup/.build
 dotfiles/.config/autokey/autokey.log
 dotfiles/.config/autokey/autokey.pid
 dotfiles/.config/autokey/autokey.json~
+dotfiles/.config/imgur_uploader/uploader.cfg
