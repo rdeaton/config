@@ -25,7 +25,17 @@ Plugin 'morhetz/gruvbox'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plugin 'junegunn/fzf.vim'
 Plugin 'ludovicchabant/vim-gutentags'
+Plugin 'vimwiki/vimwiki'
+Plugin 'vim-pandoc/vim-pandoc'
+Plugin 'vim-pandoc/vim-pandoc-syntax'
 " Plugin 'scrooloose/nerdtree'
+
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+let g:pandoc#filetypes#handled = ["pandoc","markdown"]
+let g:pandoc#filetypes#pandoc_markdown = 0
+let g:pandoc#folding#mode = ["syntax"]
+let g:vimwiki_folding='expr'
+
 
 call vundle#end()
 
@@ -51,7 +61,6 @@ let g:airline_symbols.paste = 'ρ'
 let g:airline_symbols.paste = 'Þ'
 let g:airline_symbols.paste = '∥'
 let g:airline_symbols.whitespace = 'Ξ'
-
 
 " airline symbols
 let g:airline_left_sep = ''

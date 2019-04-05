@@ -12,6 +12,8 @@ sudo apt update
 sudo apt install -y stow
 sudo apt install -y git
 sudo apt install -y neovim
+sudo apt install -y fzf
+sudo apt install -y silversearcher-ag
 # We'll overwrite this later with i3-gaps, but convenient for dependencies
 sudo apt install -y i3 i3blocks
 sudo apt install -y redshift
