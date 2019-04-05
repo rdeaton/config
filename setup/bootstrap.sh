@@ -23,7 +23,11 @@ sudo apt install -y autokey-gtk
 sudo apt install -y unclutter
 sudo apt install -y xsel
 sudo apt install -y xclip
+sudo apt install -y maim
+sudo apt install -y python3-pip
+pip3 install imgur-uploader
 
+mkdir -p ~/Pictures/screenshots
 mkdir -p .build
 
 ./i3-gaps.sh
