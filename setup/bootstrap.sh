@@ -33,6 +33,7 @@ mkdir -p .build
 ./i3-gaps.sh
 ./fonts.sh
 ./rofi.sh
+./py.sh
 
 rm ~/.profile ~/.bashrc
 mkdir -p ~/.local/bin
