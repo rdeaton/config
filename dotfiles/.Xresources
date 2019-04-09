@@ -2,8 +2,8 @@ Xft.dpi: 192
 *.dpi: 192
 *.font: Source Code Pro for Powerline:size=12:antialias=true:autohint=true
 
-! hard contrast: *background: #1d2021
-*background: #282828
+*background: #1d2021
+! *background: #282828
 ! soft contrast: *background: #32302f
 *foreground: #ebdbb2
 ! Black + DarkGrey
