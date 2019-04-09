@@ -25,6 +25,7 @@ sudo apt install -y xsel
 sudo apt install -y xclip
 sudo apt install -y maim
 sudo apt install -y python3-pip
+sudo apt install -y net-tools
 pip3 install imgur-uploader
 
 mkdir -p ~/Pictures/screenshots
