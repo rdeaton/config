@@ -82,3 +82,5 @@ nmap <Leader>h :History<CR>
 
 nnoremap <Leader>k :<C-u>silent! move-2<CR>==
 nnoremap <Leader>j :<C-u>silent! move+<CR>==
+
+au BufWinEnter * normal zR
