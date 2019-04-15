@@ -28,6 +28,7 @@ Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
+Plugin 'cespare/vim-toml'
 " Plugin 'scrooloose/nerdtree'
 
 let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
