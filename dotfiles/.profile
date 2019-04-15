@@ -10,7 +10,9 @@ if [ -d "$HOME/bin" ] ; then
 fi
 
 export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
 export EDITOR="nvim"
 export BROWSER="google-chrome"
-
+export TERMINAL="st"
 export PATH="$HOME/.poetry/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
