@@ -1,0 +1,81 @@
+#!/usr/bin/env python3
+from i3pystatus import Status
+
+fg_colors = [
+    "#ebdbb2",
+    "#ebdbb2",
+    "#ebdbb2",
+    "#ebdbb2",
+    "#ebdbb2",
+]
+
+colors = [
+    "#282828",
+    "#458588",
+    "#98971a",
+    "#d79921",
+    "#cc241d",
+]
+
+hints = {"markup": "pango","separator": False,"separator_block_width": 0}
+i=0
+
+def separator(left_color, right_color):
+    return "<span background='{left_color}' color='{right_color}'> \ue0b2</span><span background='{right_color}'> </span>".format(
+           left_color=left_color, right_color=right_color)
+
+def bg(background, text):
+    return "<span background='{background}'>{text}</span>".format(
+           background=background, text=text)
+
+status = Status()
+status.register("clock",
+    hints=hints,
+    color=fg_colors[i],
+    interval=10,
+    format=bg(colors[i], "%a %d %b %H:%M"))
+
+i += 1
+
+status.register("battery",
+    hints=hints,
+    color=fg_colors[i],
+    interval=60,
+    status={
+        "DIS": " ",
+        "CHR": "  ",
+        "FULL": " ",
+    } ,
+    format=bg(colors[i], "{status} {percentage:.0f}% {remaining}")+separator(colors[i], colors[i-1]))
+
+i += 1
+
+status.register("network",
+    interval=10,
+    interface="wlp58s0",
+    hints=hints,
+    color_up=fg_colors[1],
+    color_down=fg_colors[1],
+    format_up=bg(colors[i], "\uf1eb") + separator(colors[i], colors[i-1]),
+    format_down=bg(colors[i], "\uf1eb DOWN") + separator(colors[i], colors[i-1]),
+    on_leftclick="rofi-wifi-menu")
+
+i += 1
+
+status.register("backlight",
+    interval=10,
+    format=bg(colors[i], " {percentage:.0f}%") + separator(colors[i], colors[i-1]),
+    color=fg_colors[i],
+    hints=hints)
+
+i += 1
+
+status.register("pulseaudio",
+    hints=hints,
+    color_unmuted=fg_colors[i],
+    color_muted=fg_colors[i],
+    muted="\uf026",
+    unmuted="\uf028",
+    format=bg(colors[i], " {muted} {volume}") + separator(colors[i], colors[i-1]))
+
+status.run()

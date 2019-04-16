@@ -1,0 +1,2 @@
+#!/bin/bash
+ps -ef | grep /[p]yi3 | awk '{print $2}' | xargs kill -USR1
