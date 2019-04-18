@@ -31,6 +31,7 @@ pip3 install imgur-uploader
 mkdir -p ~/Pictures/screenshots
 mkdir -p .build
 
+./rust.sh
 ./i3-gaps.sh
 ./fonts.sh
 ./rofi.sh
