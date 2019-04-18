@@ -5,32 +5,38 @@ exec --no-startup-id unclutter
 exec --no-startup-id xsetroot -solid "#000000"
 exec --no-startup-id mouseconfig
 exec --no-startup-id clipster -d
-exec --no-startup-id launch-polybar
-
+exec_always --no-startup-id "sleep 1 ; pyi3-refresh; sleep 1; pyi3-refresh"
 default_border none
+
+font pango:Source Code Pro for Powerline 10
 
 gaps inner 10
 gaps outer 10
 for_window [class="^.*"] border pixel 2
+floating_minimum_size 800 x 600
 
 set $mod Mod4
 set $alt Mod1
 set $ctrl Control
 
-font pango:monospace 10
+set $ws1 "1: "
+set $ws2 "2: "
+set $ws3 "3: "
+set $ws4 "4: "
+
 
 floating_modifier $mod
 focus_follows_mouse no
 focus_wrapping no
 
-bindsym $ctrl+space exec rofi -combo-modi window#run -modi combi -show combi
+bindsym $ctrl+space exec rofi -lines 12 -padding 18 -combo-modi window#run -modi combi -show combi
 bindsym $mod+v exec rofi-clip
 
-bindsym XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10
-bindsym XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10
-bindsym XF86AudioMute			exec --no-startup-id pulsemixer --toggle-mute
-bindsym XF86MonBrightnessDown		exec --no-startup-id adaptive-backlight-control -dec
-bindsym XF86MonBrightnessUp		exec --no-startup-id adaptive-backlight-control -inc
+bindsym XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10 ; exec --no-startup-id pyi3-refresh
+bindsym XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10 ; exec --no-startup-id pyi3-refresh
+bindsym XF86AudioMute			exec --no-startup-id pulsemixer --toggle-mute ; exec --no-startup-id pyi3-refresh
+bindsym XF86MonBrightnessDown		exec --no-startup-id adaptive-backlight-control -dec ; exec --no-startup-id pyi3-refresh
+bindsym XF86MonBrightnessUp		exec --no-startup-id adaptive-backlight-control -inc ; exec --no-startup-id pyi3-refresh
 
 bindsym $mod+h focus left
 bindsym $mod+j focus down
@@ -70,28 +76,28 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # switch to workspace
-bindsym $mod+1 workspace 1
-bindsym $mod+2 workspace 2
-bindsym $mod+3 workspace 3
-bindsym $mod+4 workspace 4
-bindsym $mod+5 workspace 5
-bindsym $mod+6 workspace 6
-bindsym $mod+7 workspace 7
-bindsym $mod+8 workspace 8
-bindsym $mod+9 workspace 9
-bindsym $mod+0 workspace 10
+bindsym $mod+1 workspace number 1
+bindsym $mod+2 workspace number 2
+bindsym $mod+3 workspace number 3
+bindsym $mod+4 workspace number 4
+bindsym $mod+5 workspace number 5
+bindsym $mod+6 workspace number 6
+bindsym $mod+7 workspace number 7
+bindsym $mod+8 workspace number 8
+bindsym $mod+9 workspace number 9
+bindsym $mod+0 workspace number 10
 
 # move focused container to workspace
-bindsym $mod+Shift+1 move container to workspace 1
-bindsym $mod+Shift+2 move container to workspace 2
-bindsym $mod+Shift+3 move container to workspace 3
-bindsym $mod+Shift+4 move container to workspace 4
-bindsym $mod+Shift+5 move container to workspace 5
-bindsym $mod+Shift+6 move container to workspace 6
-bindsym $mod+Shift+7 move container to workspace 7
-bindsym $mod+Shift+8 move container to workspace 8
-bindsym $mod+Shift+9 move container to workspace 9
-bindsym $mod+Shift+0 move container to workspace 10
+bindsym $mod+Shift+1 move container to workspace number 1
+bindsym $mod+Shift+2 move container to workspace number 2
+bindsym $mod+Shift+3 move container to workspace number 3
+bindsym $mod+Shift+4 move container to workspace number 4
+bindsym $mod+Shift+5 move container to workspace number 5
+bindsym $mod+Shift+6 move container to workspace number 6
+bindsym $mod+Shift+7 move container to workspace number 7
+bindsym $mod+Shift+8 move container to workspace number 8
+bindsym $mod+Shift+9 move container to workspace number 9
+bindsym $mod+Shift+0 move container to workspace number 10
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -130,16 +136,15 @@ bindsym Shift+Print exec "area-screenshot"
 bindsym $mod+Print exec "window-screenshot"
 
 bar {
-    font pango:Source Code Pro for Powerline, FontAwesome 12
+    font pango:Source Code Pro for Powerline, Font Awesome 5 Pro Solid, FontAwesome, Weather Icons 12
     position top
-    status_command ~/bin/i3status-rs ~/.config/i3/status.toml
+    status_command pyi3
     colors {
-        separator #666666
-        background #222222
+        background #282828
         statusline #dddddd
         focused_workspace #0088CC #0088CC #ffffff
-        active_workspace #333333 #333333 #ffffff
-        inactive_workspace #333333 #333333 #888888
+        active_workspace #282828 #282828 #ffffff
+        inactive_workspace #282828 #282828 #888888
         urgent_workspace #2f343a #900000 #ffffff
     }
 }
