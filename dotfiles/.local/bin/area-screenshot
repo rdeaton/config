@@ -1,0 +1,4 @@
+#!/bin/bash
+F=$(eval "echo ~/Pictures/screenshots/ss_$(date +%s).png")
+maim -s $F > /dev/null
+upload-to-imgur $F
