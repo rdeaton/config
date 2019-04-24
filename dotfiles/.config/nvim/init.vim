@@ -14,6 +14,8 @@ set number
 set wildmode=longest,list
 set termguicolors
 
+let g:python3_host_prog = '/home/rdeaton/.pyenv/versions/neovim3/bin/python'
+
 set filetype=off
 
 set rtp+=~/.config/nvim/bundle/Vundle.vim
@@ -30,9 +32,12 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'cespare/vim-toml'
 Plugin 'scrooloose/nerdcommenter'
-" Plugin 'scrooloose/nerdtree'
 
-let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
+Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plugin 'zchee/deoplete-jedi'
+
+let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
+            \{'path': '~/w/lfg/docs', 'syntax': 'markdown', 'ext': '.md'}]
 let g:pandoc#filetypes#handled = ["pandoc","markdown"]
 let g:pandoc#filetypes#pandoc_markdown = 0
 let g:pandoc#folding#mode = ["syntax"]
