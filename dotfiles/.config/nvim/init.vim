@@ -32,7 +32,7 @@ Plugin 'vim-pandoc/vim-pandoc'
 Plugin 'vim-pandoc/vim-pandoc-syntax'
 Plugin 'cespare/vim-toml'
 Plugin 'scrooloose/nerdcommenter'
-
+Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-jedi'
 

@@ -24,13 +24,16 @@ set $ws2 "2: "
 set $ws3 "3: "
 set $ws4 "4: "
 
-
 floating_modifier $mod
 focus_follows_mouse no
+focus_on_window_activation focus
 focus_wrapping no
+
+assign [instance="project_*"] $ws1
 
 bindsym $ctrl+space exec rofi -lines 12 -padding 18 -combo-modi window#run -modi combi -show combi
 bindsym $mod+v exec rofi-clip
+bindsym $mod+p exec rofi-project-launcher
 
 bindsym XF86AudioLowerVolume		exec --no-startup-id pulsemixer --change-volume -10 ; exec --no-startup-id pyi3-refresh
 bindsym XF86AudioRaiseVolume		exec --no-startup-id pulsemixer --change-volume +10 ; exec --no-startup-id pyi3-refresh

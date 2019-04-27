@@ -26,7 +26,10 @@ sudo apt install -y xclip
 sudo apt install -y maim
 sudo apt install -y python3-pip
 sudo apt install -y net-tools
+sudo apt install -y tmux
+sudo apt install -y jq
 pip3 install imgur-uploader
+pip3 install tmuxp
 
 mkdir -p ~/Pictures/screenshots
 mkdir -p .build

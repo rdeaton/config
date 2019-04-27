@@ -1,0 +1,15 @@
+#!/bin/bash
+PROJECTS=$(ls ~/.tmuxp | grep -v .template | sed -re 's/\.yaml$//')
+
+selected=$(echo -ne "$PROJECTS" | rofi -dmenu -p "Launch Project")
+if [ $? -ne 0 ]; then
+    exit 1
+fi
+echo $selected
+
+if xwininfo -tree -root | grep "(\"project_$selected\" "; then
+    echo "Window detected"
+    i3-msg "[instance=\"project_$selected\"] focus"
+else
+    i3-msg "exec --no-startup-id $TERMINAL -n project_$selected -e tmuxp load -y $selected"
+fi
