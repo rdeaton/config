@@ -28,6 +28,8 @@ sudo apt install -y python3-pip
 sudo apt install -y net-tools
 sudo apt install -y tmux
 sudo apt install -y jq
+sudo apt install -y hub
+sudo apt install -y ripgrep
 pip3 install imgur-uploader
 pip3 install tmuxp
 
