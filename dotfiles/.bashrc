@@ -117,5 +117,7 @@ if ! shopt -oq posix; then
 fi
 
 export PATH="/home/rdeaton/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+
+for file in ~/.config/bash/*.sh; do
+    source "$file"
+done

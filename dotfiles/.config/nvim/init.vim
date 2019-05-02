@@ -36,7 +36,7 @@ Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-jedi'
 
-let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'},
+let g:vimwiki_list = [{'path': '~/w/wiki-rdeaton-osaro', 'syntax': 'markdown', 'ext': '.md'},
             \{'path': '~/w/lfg/docs', 'syntax': 'markdown', 'ext': '.md'}]
 let g:pandoc#filetypes#handled = ["pandoc","markdown"]
 let g:pandoc#filetypes#pandoc_markdown = 0
