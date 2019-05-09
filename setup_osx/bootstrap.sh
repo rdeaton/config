@@ -16,6 +16,17 @@ brew install neovim
 brew install fzf
 brew install rg
 brew install tmux
+brew install coreutils
+brew install moreutils
+# tmux urlview
+brew install urlview
+# github markdown local renderer
+brew install grip
+brew cask install 1password-cli
+brew cask install docker
+brew install bash
+echo "/usr/local/bin/bash" | sudo tee /etc/shells
+chsh -s /usr/local/bin/bash
 pip3 install tmuxp
 cd ~/.local/bin
 curl -O https://s3-eu-west-1.amazonaws.com/record-query/record-query/x86_64-apple-darwin/rq
@@ -39,6 +50,8 @@ brew cask install font-inconsolata-for-powerline
 brew cask install flycut
 brew cask install google-chrome
 brew cask install flux
+brew cask install alfred
+brew cask install keybase
 brew cask install vlc
 
 # Python tooling

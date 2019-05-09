@@ -26,6 +26,8 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'morhetz/gruvbox'
 Plugin 'junegunn/fzf', { 'dir': '~/.fzf' }
 Plugin 'junegunn/fzf.vim'
+" The tags file has been a pain so far, and not worth the benefits. Disabling
+" for now
 Plugin 'ludovicchabant/vim-gutentags'
 Plugin 'vimwiki/vimwiki'
 Plugin 'vim-pandoc/vim-pandoc'
@@ -35,6 +37,10 @@ Plugin 'scrooloose/nerdcommenter'
 Plugin 'christoomey/vim-tmux-navigator'
 Plugin 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plugin 'zchee/deoplete-jedi'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-repeat'
+Plugin 'tpope/vim-surround'
 
 let g:vimwiki_list = [{'path': '~/w/wiki-rdeaton-osaro', 'syntax': 'markdown', 'ext': '.md'},
             \{'path': '~/w/lfg/docs', 'syntax': 'markdown', 'ext': '.md'}]
@@ -90,4 +96,14 @@ nmap <Leader>h :History<CR>
 nnoremap <Leader>k :<C-u>silent! move-2<CR>==
 nnoremap <Leader>j :<C-u>silent! move+<CR>==
 
-au BufWinEnter * normal zR
+" Commented out temporarily as I think this is causing weird folding issues
+" when switching buffers, but I can't yet explain why
+" au BufWinEnter * normal zR
+
+nnoremap <C-p> :Files<CR>
+inoremap <C-p> <Esc>:Files<CR>
+
+nnoremap <C-s> :w<CR>
+inoremap <C-s> <Esc>:w<CR>i
+
+set hidden
