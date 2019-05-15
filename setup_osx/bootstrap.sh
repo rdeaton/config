@@ -26,6 +26,7 @@ brew cask install 1password-cli
 brew cask install docker
 brew install bash
 brew install bash-completion@2
+brew install postgres
 echo "/usr/local/bin/bash" | sudo tee /etc/shells
 chsh -s /usr/local/bin/bash
 pip3 install tmuxp
