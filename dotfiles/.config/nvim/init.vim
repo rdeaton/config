@@ -107,4 +107,11 @@ inoremap <C-p> <Esc>:Files<CR>
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>i
 
+nnoremap <silent> <C-w> :w<CR>:bp<CR>:bd #<CR>
+
+" C-/ is mapped to C-_ for ??!?!
+nmap <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle<CR>gv
+imap <C-_> <ESC><plug>NERDCommenterToggle<ESC>i
+
 set hidden
