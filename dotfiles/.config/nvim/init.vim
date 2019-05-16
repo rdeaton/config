@@ -41,6 +41,7 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-surround'
+Plugin 'ntpeters/vim-better-whitespace'
 
 let g:vimwiki_list = [{'path': '~/w/wiki-rdeaton-osaro', 'syntax': 'markdown', 'ext': '.md'},
             \{'path': '~/w/lfg/docs', 'syntax': 'markdown', 'ext': '.md'}]
@@ -105,5 +106,12 @@ inoremap <C-p> <Esc>:Files<CR>
 
 nnoremap <C-s> :w<CR>
 inoremap <C-s> <Esc>:w<CR>i
+
+nnoremap <silent> <C-w> :w<CR>:bp<CR>:bd #<CR>
+
+" C-/ is mapped to C-_ for ??!?!
+nmap <C-_> <plug>NERDCommenterToggle
+vmap <C-_> <plug>NERDCommenterToggle<CR>gv
+imap <C-_> <ESC><plug>NERDCommenterToggle<ESC>i
 
 set hidden
