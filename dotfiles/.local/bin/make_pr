@@ -1,0 +1,26 @@
+#!/bin/bash
+
+# TODO: Support a flag for rebasing before PR
+# TODO: What to do when things don't apply cleanly?
+# TODO: Can we autostash? What if there weren't changes, how do we apply them
+
+set -e
+SOURCE_BRANCH=$1
+CURRENT_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+COMMITS=$(git log -s --oneline `git merge-base HEAD origin/$SOURCE_BRANCH`... | fzf -m --ansi | cut -d' ' -f1)
+echo -n "slug for the new branch: "
+read branch_slug
+NEW_BRANCH=rdeaton/$(date +%Y%m%d)_${branch_slug}
+
+# git stash
+git checkout -b $NEW_BRANCH origin/$SOURCE_BRANCH
+
+for commit in $COMMITS
+do
+    git cherry-pick $commit
+done
+git push -u origin $NEW_BRANCH
+hub pull-request --edit -c -b $SOURCE_BRANCH
+git checkout $CURRENT_BRANCH
+# git stash pop
