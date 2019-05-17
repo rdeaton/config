@@ -94,5 +94,12 @@ status.register("weather",
     backend=darksky.Darksky(lat=37.74, lon=-122.44, api_key="8d793a58da3f457db4e3ca923392b9f2"),
     format=bg(colors[i], wi("{faicon}")+"{temp}"+wi("\uf045")+"({temp_hi},{temp_low})") + separator(colors[i], colors[i-1]))
 
+i += 1
+i = i % len(colors)
+status.register("pomodoro",
+    hints=hints,
+    color=fg_colors[i],
+    format=separator(colors[0], colors[i]) + bg(colors[i], "\uf017") + separator(colors[i], colors[i-1]))
+
 # separator(colors[0], colors[i]) +
 status.run()
